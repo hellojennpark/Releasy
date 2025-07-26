@@ -7,7 +7,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 const config: Config = {
   title: "Simplikins",
   tagline: "User-centric Jenkins manager: control multiple Jenkins instances",
-  favicon: "img/favicon.ico",
+  favicon: "img/heart_on_fire_flat.svg",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -70,7 +70,25 @@ const config: Config = {
           type: "docSidebar",
           sidebarId: "tutorialSidebar",
           position: "left",
-          label: "Tutorial",
+          label: "Getting Started",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "apiSidebar",
+          position: "left",
+          label: "API Documentation",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "featureSidebar",
+          position: "left",
+          label: "Features",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "architectureSidebar",
+          position: "left",
+          label: "Architecture",
         },
         // {
         //   href: "https://github.com/facebook/docusaurus",

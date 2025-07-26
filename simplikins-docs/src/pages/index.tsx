@@ -22,7 +22,7 @@ function HomepageHeader() {
             className="button button--secondary button--lg"
             to="/docs/intro"
           >
-            Simplikins Demo 🖱️
+            Simplikins Demo 👀
           </Link>
         </div>
       </div>
