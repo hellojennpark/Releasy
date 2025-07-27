@@ -1,0 +1,8 @@
+{
+  "label": "Job Management",
+  "link": {
+    "description": "Managing Jenkins jobs across multiple servers becomes exponentially complex as organizations scale, leading to context switching, missed failures, and inefficient troubleshooting. Teams waste valuable time navigating between different Jenkins instances, losing visibility into overall deployment health and cross-team dependencies. Centralized job management eliminates these pain points while maintaining operational flexibility.",
+    "type": "generated-index"
+  },
+  "position": 2
+}

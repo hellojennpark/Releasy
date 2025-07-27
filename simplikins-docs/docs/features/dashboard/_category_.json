@@ -1,0 +1,8 @@
+{
+  "label": "Dashboard",
+  "link": {
+    "description": "Without centralized monitoring, engineering teams lack visibility into the overall health of their CI/CD infrastructure, making it difficult to identify bottlenecks, plan capacity, or respond quickly to issues. Scattered metrics across multiple Jenkins instances create blind spots that can impact delivery timelines and system reliability. A unified dashboard transforms operational chaos into actionable insights.",
+    "type": "generated-index"
+  },
+  "position": 3
+}

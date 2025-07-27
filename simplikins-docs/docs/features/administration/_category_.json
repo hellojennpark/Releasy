@@ -1,0 +1,8 @@
+{
+  "label": "Administration",
+  "link": {
+    "description": "Managing multiple Jenkins servers, users, and configurations manually is error-prone and doesn't scale with growing development teams. Organizations need centralized administration to ensure consistent security policies, maintain compliance standards, and efficiently onboard new team members. Without proper administrative controls, Jenkins environments become fragmented and difficult to govern.",
+    "type": "generated-index"
+  },
+  "position": 4
+}

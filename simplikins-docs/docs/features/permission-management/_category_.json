@@ -1,8 +1,8 @@
 {
   "label": "Permission Management",
   "link": {
-    "description": "5 minutes to learn the most important Docusaurus concepts.",
+    "description": "Traditional Jenkins environments often suffer from over-privileged access or cumbersome manual permission processes, creating security risks and operational bottlenecks. Organizations need a structured, auditable way to grant temporary access to critical CI/CD resources without compromising security. This creates accountability while ensuring teams can access the resources they need when they need them.",
     "type": "generated-index"
   },
-  "position": 2
+  "position": 1
 }
