@@ -4,6 +4,8 @@ sidebar_position: 1
 
 # Page Structure
 
+Simkins is a comprehensive web-based platform designed to centralize and streamline Jenkins server management across multiple environments. It provides a unified interface for managing jobs, permissions, and monitoring across distributed Jenkins instances, enhancing productivity and operational efficiency for development teams.
+
 ## 1. Permission Management
 
 | Page                     | Description                                       | Key Features                                           |
