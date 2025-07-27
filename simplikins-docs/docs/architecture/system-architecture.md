@@ -5,7 +5,7 @@
 ```mermaid
 graph TB
     %% Client Layer
-    WebClient[Web Client<br/>React/Vue]
+    WebClient[Web Client<br/>React]
     APIClient[API Client<br/>Automation Tools]
 
     %% Load Balancer

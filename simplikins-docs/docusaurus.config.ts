@@ -117,8 +117,20 @@ const config: Config = {
           title: "Docs",
           items: [
             {
-              label: "Tutorial",
-              to: "/docs/intro",
+              label: "Getting Started",
+              to: "/docs/getting-started/intro",
+            },
+            {
+              label: "API Documentation",
+              to: "/docs/api/rest-api-design",
+            },
+            {
+              label: "Features",
+              to: "/docs/features/intro",
+            },
+            {
+              label: "Architecture",
+              to: "/docs/architecture/database-schema",
             },
           ],
         },
@@ -127,7 +139,7 @@ const config: Config = {
           items: [
             {
               label: "Blog",
-              to: "https://www.hellojennpark.com/blog",
+              href: "https://www.hellojennpark.com/blog",
             },
             {
               label: "GitHub",

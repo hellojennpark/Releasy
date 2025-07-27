@@ -2,7 +2,7 @@
 
 ## Page Description
 
-Page for managing overall Simkins system configuration
+Page for managing overall simplikins system configuration
 
 ## Components
 
@@ -18,7 +18,7 @@ Page for managing overall Simkins system configuration
 
 | Setting Key      | Description               | Type   | Default      | Validation         |
 | ---------------- | ------------------------- | ------ | ------------ | ------------------ |
-| app_name         | Application name          | string | "Simkins"    | 1-50 characters    |
+| app_name         | Application name          | string | "simplikins" | 1-50 characters    |
 | app_logo         | Logo image URL            | url    | -            | Image URL          |
 | default_timezone | Default timezone          | select | "Asia/Seoul" | Valid timezone     |
 | session_timeout  | Session timeout (minutes) | number | 480          | 30-1440 minutes    |
