@@ -1,3 +1,7 @@
+---
+id: database-schema
+---
+
 # Database Schema
 
 ## Jenkins Servers Configuration

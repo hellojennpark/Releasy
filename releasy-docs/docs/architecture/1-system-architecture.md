@@ -1,3 +1,7 @@
+---
+id: system-architecture
+---
+
 # System Architecture
 
 ## High-Level Architecture
