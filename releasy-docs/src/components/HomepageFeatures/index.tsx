@@ -11,35 +11,35 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: "Unified Multi-Instance Management",
+    title: "Multi-Platform CI/CD Management",
     Png: "img/handshake_3d.png",
     description: (
       <>
-        Manage multiple Jenkins instances from a single interface. Monitor and
-        execute jobs across your entire CI/CD infrastructure without context
-        switching.
+        Manage Jenkins, Airflow, GitHub Actions, and other CI/CD tools from a
+        single unified interface. Monitor pipelines and workflows across your
+        entire release infrastructure without tool switching.
       </>
     ),
   },
   {
-    title: "Integrated Permission Workflow",
+    title: "Streamlined Permission & Approval Workflows",
     Png: "img/locked_with_pen_3d.png",
     description: (
       <>
-        Built-in permission request and approval process. Replace permission
-        requests with structured, auditable workflows that maintain complete
-        access history.
+        Built-in permission management and approval processes across platforms.
+        Replace ad-hoc permission requests with structured, auditable workflows
+        that maintain complete access history and compliance.
       </>
     ),
   },
   {
-    title: "User-Centric Experience",
+    title: "Developer-First Experience",
     Png: "img/bullseye_3d.png",
     description: (
       <>
-        Simplified interface for developers and operators. Hide complexity while
-        exposing essential features to reduce learning curve and boost
-        productivity.
+        Intuitive interface that abstracts away platform complexity. Developers
+        focus on releases, not tool-specific configurations. Operators get
+        centralized control and visibility.
       </>
     ),
   },

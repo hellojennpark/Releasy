@@ -6,7 +6,8 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "Releasy",
-  tagline: "User-centric Jenkins manager: control multiple Jenkins instances",
+  tagline:
+    "Unified Release Management Platform: streamline your CI/CD operations across multiple tools",
   favicon: "img/heart_on_fire_flat.svg",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
