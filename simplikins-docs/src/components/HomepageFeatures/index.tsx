@@ -11,11 +11,11 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: "Unified Multi-Server Management",
+    title: "Unified Multi-Instance Management",
     Png: "img/handshake_3d.png",
     description: (
       <>
-        Manage multiple Jenkins servers from a single interface. Monitor and
+        Manage multiple Jenkins instances from a single interface. Monitor and
         execute jobs across your entire CI/CD infrastructure without context
         switching.
       </>

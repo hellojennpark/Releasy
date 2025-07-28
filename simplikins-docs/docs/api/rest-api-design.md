@@ -57,6 +57,7 @@ GET    /builds/{id}                   # Build details
 GET    /builds/{id}/stages            # Build stages
 GET    /builds/{id}/stages/{stageId}/logs # Stage logs
 POST   /builds/{id}/stages/{stageId}/approve # Approve stage
+POST   /builds/{id}/stages/{stageId}/reject # Reject stage
 ```
 
 ### Dashboard
