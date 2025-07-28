@@ -108,7 +108,7 @@ GET /permissions/history?user_id=456&export=csv
 ## WebSocket Events (Real-time Updates)
 
 ```javascript
-// WebSocket endpoint: wss://api.simplikins.company.com/ws
+// WebSocket endpoint: wss://api.releasy.company.com/ws
 
 // Client subscribes to events
 {

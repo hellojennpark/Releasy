@@ -5,7 +5,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: "Simplikins",
+  title: "Releasy",
   tagline: "User-centric Jenkins manager: control multiple Jenkins instances",
   favicon: "img/heart_on_fire_flat.svg",
 
@@ -15,7 +15,7 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: "https://simplikins.vercel.app",
+  url: "https://releasy.vercel.app",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -63,9 +63,9 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/simplikins_social_card.png",
     navbar: {
-      title: "Simplikins",
+      title: "Releasy",
       logo: {
-        alt: "Simplikins Logo",
+        alt: "Releasy Logo",
         src: "img/heart_on_fire_animated.png",
       },
       items: [
@@ -99,7 +99,7 @@ const config: Config = {
         //   position: "right",
         // },
         {
-          href: "https://github.com/hellojennpark/Simplikins",
+          href: "https://github.com/hellojennpark/Releasy",
           label: "GitHub",
           position: "right",
         },
@@ -143,12 +143,12 @@ const config: Config = {
             },
             {
               label: "GitHub",
-              href: "https://github.com/hellojennpark/Simplikins",
+              href: "https://github.com/hellojennpark/Releasy",
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Simplikins, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Releasy, Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
