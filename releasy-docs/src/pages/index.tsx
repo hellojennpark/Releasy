@@ -17,7 +17,7 @@ function HomepageHeader() {
           {siteConfig.title}
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
+        {/* <div className={styles.buttons}>
           <Link
             className="button button--lg"
             to="/docs/getting-started/intro"
@@ -32,7 +32,7 @@ function HomepageHeader() {
           >
             Demo
           </Link>
-        </div>
+        </div> */}
       </div>
     </header>
   );

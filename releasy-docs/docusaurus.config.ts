@@ -70,12 +70,12 @@ const config: Config = {
         src: "img/heart_on_fire_animated.png",
       },
       items: [
-        {
-          type: "docSidebar",
-          sidebarId: "tutorialSidebar",
-          position: "left",
-          label: "Getting Started",
-        },
+        // {
+        //   type: "docSidebar",
+        //   sidebarId: "tutorialSidebar",
+        //   position: "left",
+        //   label: "Getting Started",
+        // },
         {
           type: "docSidebar",
           sidebarId: "apiSidebar",
@@ -117,10 +117,10 @@ const config: Config = {
         {
           title: "Docs",
           items: [
-            {
-              label: "Getting Started",
-              to: "/docs/getting-started/intro",
-            },
+            // {
+            //   label: "Getting Started",
+            //   to: "/docs/getting-started/intro",
+            // },
             {
               label: "API Documentation",
               to: "/docs/api/rest-api-design",
