@@ -12,7 +12,6 @@
 *.d.ts
 
 # Logs
-**/logs/
 *.log
 
 # Environment variables
