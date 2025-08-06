@@ -183,7 +183,6 @@ export const DraggableTimelineChart: React.FC<DraggableTimelineChartProps> = ({
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="timestamp" fontSize={12} />
             <YAxis fontSize={12} />
-            <Tooltip content={<CustomTooltip />} />
             <Legend />
 
             {filters.success && (
@@ -230,6 +229,13 @@ export const DraggableTimelineChart: React.FC<DraggableTimelineChartProps> = ({
                 activeDot={{ r: 5 }}
               />
             )}
+            <Tooltip
+              content={<CustomTooltip />}
+              wrapperStyle={{
+                zIndex: 9999,
+                position: "absolute",
+              }}
+            />
           </LineChart>
         </ResponsiveContainer>
       </div>
