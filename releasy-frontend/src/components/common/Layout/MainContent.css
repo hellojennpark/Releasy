@@ -1,0 +1,29 @@
+.main-content {
+  flex: 1;
+  padding: var(--spacing-lg);
+  background-color: var(--bg-primary);
+  min-height: calc(100vh - var(--header-height));
+  transition: all 0.3s ease;
+}
+
+.main-content-inner {
+  max-width: 100%;
+  margin: 0 auto;
+  animation: fadeIn 0.3s ease-out;
+}
+
+
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: var(--spacing-sm);
+  }
+}

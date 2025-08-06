@@ -1,0 +1,41 @@
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-primary);
+}
+
+.app-body {
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
+/* Ensure proper stacking context */
+.app-layout * {
+  position: relative;
+}
+
+/* Loading state */
+.app-layout.loading {
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+/* Focus management */
+.app-layout:focus-within {
+  /* Enhance focus visibility in the app */
+}
+
+/* Print styles */
+@media print {
+  .app-layout .sidebar,
+  .app-layout .header {
+    display: none;
+  }
+  
+  .app-layout .main-content {
+    margin: 0;
+    padding: 0;
+  }
+}
