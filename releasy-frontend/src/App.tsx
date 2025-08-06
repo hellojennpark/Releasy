@@ -1,7 +1,7 @@
 import React from "react";
 import { AppLayout } from "./components/common/Layout/AppLayout";
-import { DashboardPage } from "./components/dashboard/DashboardPage";
 import "./App.css";
+import DashboardPage from "./components/dashboard/DashboardPage";
 
 function App() {
   return (

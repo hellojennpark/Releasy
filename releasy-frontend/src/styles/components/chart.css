@@ -1,0 +1,136 @@
+/* src/styles/components/chart.css */
+
+.chart-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.chart-filters {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.chart-filters-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chart-filters-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--text-muted);
+}
+
+.chart-filters-text {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.chart-filter-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.chart-filter-button.active {
+  background-color: rgba(59, 130, 246, 0.2);
+  color: var(--text-primary);
+  border: 1px solid var(--primary-color);
+}
+
+.chart-filter-button.inactive {
+  background-color: var(--bg-tertiary);
+  color: var(--text-muted);
+}
+
+.chart-filter-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.chart-filter-indicator.success {
+  background-color: var(--success-color);
+}
+
+.chart-filter-indicator.failed {
+  background-color: var(--error-color);
+}
+
+.chart-filter-indicator.running {
+  background-color: var(--primary-color);
+}
+
+.chart-filter-indicator.queued {
+  background-color: var(--warning-color);
+}
+
+.chart-filter-indicator.inactive {
+  background-color: var(--text-muted);
+}
+
+.chart-wrapper {
+  background-color: var(--bg-primary);
+  border-radius: var(--border-radius-lg);
+  padding: 16px;
+  cursor: grab;
+  transition: var(--transition);
+}
+
+.chart-wrapper.dragging {
+  cursor: grabbing;
+}
+
+.chart-tooltip {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 12px;
+}
+
+.chart-tooltip-label {
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.chart-tooltip-item {
+  font-size: 0.875rem;
+  margin-bottom: 2px;
+}
+
+/* Recharts custom styles */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: var(--border-color);
+}
+
+.recharts-text {
+  fill: var(--text-secondary);
+}
+
+.recharts-legend-item-text {
+  color: var(--text-primary) !important;
+}
+
+.recharts-brush .recharts-brush-slide {
+  fill: var(--primary-color);
+  fill-opacity: 0.2;
+}
+
+.recharts-brush .recharts-brush-slide .recharts-brush-slide-bg {
+  fill: var(--primary-color);
+  fill-opacity: 0.1;
+}
