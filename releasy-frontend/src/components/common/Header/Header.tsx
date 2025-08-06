@@ -5,6 +5,7 @@ import { SearchBar } from "./SearchBar";
 import { ThemeToggle } from "./ThemeToggle";
 
 import "./Header.css";
+import { getEnvironmentMeta } from "../../../utils/env";
 
 interface HeaderProps {
   onMenuToggle?: () => void;
@@ -15,6 +16,8 @@ export const Header: React.FC<HeaderProps> = ({
   onMenuToggle,
   isSidebarOpen = true,
 }) => {
+  const { label, className } = getEnvironmentMeta();
+
   const handleSearch = (query: string) => {
     console.log("Search query:", query);
     // TODO: Implement search functionality
@@ -43,8 +46,11 @@ export const Header: React.FC<HeaderProps> = ({
         )}
 
         <a className="logo" href="/" aria-label="Logo">
-          <ButterflyIcon weight="duotone" size={32} fill="#3b82f6" />
-          <span className="logo-text">Releasy</span>
+          <div className="logo-text">
+            <ButterflyIcon weight="duotone" size={32} fill="#3b82f6" />
+            <span>Releasy</span>
+          </div>
+          <span className={`environment-badge ${className}`}>{label}</span>
         </a>
       </div>
 

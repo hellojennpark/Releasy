@@ -65,10 +65,12 @@
 }
 
 .logo-text {
+  display: flex;
+  align-items: center;
   font-size: 18px;
   font-weight: 600;
   color: var(--text-primary);
-  margin: 0;
+  gap: 6px;
 }
 
 .header-link {
@@ -93,6 +95,34 @@
   outline: none;
   box-shadow: 0 0 0 2px var(--border-focus);
 }
+
+.environment-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 10px;
+  color: var(--text-inverse);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+  background-color: var(--accent-primary);
+}
+
+.env-success {
+  background-color: var(--accent-success);
+}
+
+.env-warning {
+  background-color: var(--accent-warning);
+}
+
+.env-error {
+  background-color: var(--accent-error);
+}
+
 
 @media (max-width: 768px) {
   .header {
