@@ -13,7 +13,7 @@
 
 /* Ensure proper stacking context */
 .app-layout * {
-  position: relative;
+  /* position: relative; */
 }
 
 /* Loading state */
@@ -22,9 +22,12 @@
   pointer-events: none;
 }
 
-/* Focus management */
-.app-layout:focus-within {
-  /* Enhance focus visibility in the app */
+
+/* Mobile layout adjustments */
+@media (max-width: 768px) {
+  .app-body {
+    flex-direction: column;
+  }
 }
 
 /* Print styles */

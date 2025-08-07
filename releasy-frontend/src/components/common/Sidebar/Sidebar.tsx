@@ -19,13 +19,11 @@ export const Sidebar: React.FC<SidebarProps> = ({
 }) => {
   return (
     <>
-      {/* Mobile overlay */}
-      {isOpen && (
-        <div
-          className="sidebar-overlay"
-          onClick={() => onItemClick?.("close")}
-        />
-      )}
+      {/* Mobile overlay - only show when sidebar is open */}
+      <div
+        className={`sidebar-overlay ${isOpen ? "show" : ""}`}
+        onClick={() => onItemClick?.("close")}
+      />
 
       <aside
         className={`sidebar ${isOpen ? "open" : ""} ${

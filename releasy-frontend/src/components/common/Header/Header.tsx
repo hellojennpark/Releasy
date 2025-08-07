@@ -26,24 +26,22 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header className="header">
       <div className="header-left">
-        {!isSidebarOpen && (
-          <button
-            onClick={onMenuToggle}
-            className="menu-toggle"
-            aria-label="Toggle menu"
+        <button
+          onClick={onMenuToggle}
+          className="menu-toggle"
+          aria-label="Toggle menu"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
           >
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path d="M3 12h18M3 6h18M3 18h18" />
-            </svg>
-          </button>
-        )}
+            <path d="M3 12h18M3 6h18M3 18h18" />
+          </svg>
+        </button>
 
         <a className="logo" href="/" aria-label="Logo">
           <div className="logo-text">

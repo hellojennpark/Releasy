@@ -59,12 +59,6 @@ export const AppLayout: React.FC<AppLayoutProps> = ({
     }
   };
 
-  const handleSidebarToggleCollapse = () => {
-    if (!isMobile) {
-      setIsSidebarCollapsed(!isSidebarCollapsed);
-    }
-  };
-
   return (
     <div className="app-layout" data-theme={theme}>
       <Header onMenuToggle={handleMenuToggle} isSidebarOpen={isSidebarOpen} />
@@ -75,7 +69,7 @@ export const AppLayout: React.FC<AppLayoutProps> = ({
           isCollapsed={!isMobile && isSidebarCollapsed}
           activeItemId={activeMenuItem}
           onItemClick={handleSidebarItemClick}
-          onToggleCollapse={handleSidebarToggleCollapse}
+          onToggleCollapse={handleMenuToggle}
         />
 
         <MainContent
