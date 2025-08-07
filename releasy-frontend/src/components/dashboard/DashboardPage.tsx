@@ -29,7 +29,7 @@ const DashboardPage: React.FC = () => {
   const [dashboardData, setDashboardData] = useState<DashboardData | null>(
     null
   );
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const generateMockData = (): DashboardData => {
@@ -113,17 +113,13 @@ const DashboardPage: React.FC = () => {
       };
     };
 
-    if (filters.dateRange === "24h") {
-      // mock loading
-      setLoading(true);
-      setTimeout(() => {
-        setDashboardData(generateMockData());
-        setLoading(false);
-      }, 1000);
-    } else {
-      setDashboardData(generateMockData());
-      setLoading(false);
-    }
+    // setLoading(true);
+    // setTimeout(() => {
+    //   setDashboardData(generateMockData());
+    //   setLoading(false);
+    // }, 1000);
+
+    setDashboardData(generateMockData());
   }, [filters]);
 
   const handleServerChange = (selectedServers: string[]) => {
