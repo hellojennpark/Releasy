@@ -60,21 +60,27 @@ export const PerformanceMetricsCard: React.FC<PerformanceMetricsCardProps> = ({
   };
 
   const isPositiveChange =
-    changeColor === "positive" ? changeRate > 0 : changeRate < 0;
-  const changeIcon = isPositiveChange ? (
-    <TrendingUp className="metric-card-change-icon positive" />
-  ) : (
-    <TrendingDown className="metric-card-change-icon negative" />
-  );
+    changeColor === "positive" ? changeRate >= 0 : changeRate < 0;
+
+  const changeIconClass = isPositiveChange
+    ? "metric-card-change-icon positive"
+    : "metric-card-change-icon negative";
 
   const changeTextClass = isPositiveChange
     ? "metric-card-change-text positive"
     : "metric-card-change-text negative";
 
+  const changeIcon =
+    changeRate >= 0 ? (
+      <TrendingUp className={changeIconClass} />
+    ) : (
+      <TrendingDown className={changeIconClass} />
+    );
+
   // Special handling for duration metrics - show actual change in time
   const getChangeDisplay = () => {
     if (unit === "s") {
-      const changeValue = (Math.abs(changeRate) / 100) * value;
+      const changeValue = (changeRate / 100) * value;
       if (changeValue >= 60) {
         const minutes = Math.floor(changeValue / 60);
         const seconds = (changeValue % 60).toFixed(1);
@@ -82,7 +88,7 @@ export const PerformanceMetricsCard: React.FC<PerformanceMetricsCardProps> = ({
       }
       return `${changeValue.toFixed(1)}s`;
     }
-    return `${Math.abs(changeRate).toFixed(1)}%`;
+    return `${changeRate.toFixed(1)}%`;
   };
 
   return (
@@ -99,10 +105,7 @@ export const PerformanceMetricsCard: React.FC<PerformanceMetricsCardProps> = ({
 
         <div className="metric-card-change">
           {changeIcon}
-          <span className={changeTextClass}>
-            {unit === "s" ? (changeRate > 0 ? "+" : "-") : ""}
-            {getChangeDisplay()}
-          </span>
+          <span className={changeTextClass}>{getChangeDisplay()}</span>
           <span className="metric-card-change-label">{comparisonLabel}</span>
         </div>
       </div>

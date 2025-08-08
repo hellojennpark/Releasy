@@ -43,16 +43,20 @@ export const JobStatusCard: React.FC<JobStatusCardProps> = ({
   };
 
   const isPositiveChange =
-    changeColor === "positive" ? changeRate > 0 : changeRate < 0;
-  const changeIcon = isPositiveChange ? (
-    <TrendingUp className="metric-card-change-icon positive" />
-  ) : (
-    <TrendingDown className="metric-card-change-icon negative" />
-  );
-
+    changeColor === "positive" ? changeRate >= 0 : changeRate < 0;
+  const changeIconClass = isPositiveChange
+    ? "metric-card-change-icon positive"
+    : "metric-card-change-icon negative";
   const changeTextClass = isPositiveChange
     ? "metric-card-change-text positive"
     : "metric-card-change-text negative";
+
+  const changeIcon =
+    changeRate >= 0 ? (
+      <TrendingUp className={changeIconClass} />
+    ) : (
+      <TrendingDown className={changeIconClass} />
+    );
 
   return (
     <div className="metric-card">
@@ -68,9 +72,7 @@ export const JobStatusCard: React.FC<JobStatusCardProps> = ({
 
         <div className="metric-card-change">
           {changeIcon}
-          <span className={changeTextClass}>
-            {Math.abs(changeRate).toFixed(1)}%
-          </span>
+          <span className={changeTextClass}>{changeRate.toFixed(1)}%</span>
           <span className="metric-card-change-label">{comparisonLabel}</span>
         </div>
       </div>
