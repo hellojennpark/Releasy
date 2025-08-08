@@ -1,25 +1,14 @@
-/* src/styles/dashboard.css */
-
-/* Base Variables */
 :root {
-  --primary-color: #3B82F6;
-  --success-color: #10B981;
-  --warning-color: #F59E0B;
-  --error-color: #EF4444;
+  --primary-color: var(--accent-primary);
+  --success-color: var(--accent-success);
+  --warning-color: var(--accent-warning);
+  --error-color: var(--accent-error);
   --info-color: #8B5CF6;
   --orange-color: #F97316;
-  
-  --bg-primary: #FFFFFF;
-  --bg-secondary: #F9FAFB;
-  --bg-tertiary: #F3F4F6;
-  --text-primary: #111827;
-  --text-secondary: #6B7280;
-  --text-muted: #9CA3AF;
+
+
   --border-color: #E5E7EB;
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  
+
   --transition: all 0.2s ease-in-out;
   --border-radius: 8px;
   --border-radius-lg: 12px;
@@ -27,13 +16,7 @@
 
 /* Dark Theme Variables */
 [data-theme="dark"] {
-  --bg-primary: #1F2937;
-  --bg-secondary: #111827;
-  --bg-tertiary: #374151;
-  --text-primary: #F9FAFB;
-  --text-secondary: #D1D5DB;
-  --text-muted: #9CA3AF;
-  --border-color: #374151;
+  --border-color: var(--border-primary);
 }
 
 /* Dashboard Layout */

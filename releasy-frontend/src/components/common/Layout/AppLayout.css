@@ -11,10 +11,6 @@
   position: relative;
 }
 
-/* Ensure proper stacking context */
-.app-layout * {
-  /* position: relative; */
-}
 
 /* Loading state */
 .app-layout.loading {

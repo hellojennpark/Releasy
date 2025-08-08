@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AppLayout } from "./components/common/Layout/AppLayout";
 import DashboardPage from "./components/dashboard/DashboardPage";
 import HistoryPage from "./components/history/HistoryPage";
-import "./App.css";
+import "./styles/global.css";
 
 import { useLocation } from "react-router-dom";
 
