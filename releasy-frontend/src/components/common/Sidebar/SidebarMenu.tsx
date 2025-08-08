@@ -100,9 +100,9 @@ export const defaultMenuItems: MenuItem[] = [
     ),
   },
   {
-    id: "logs",
-    label: "Logs",
-    href: "/logs",
+    id: "history",
+    label: "History",
+    href: "/history",
     icon: (
       <svg
         width="20"
