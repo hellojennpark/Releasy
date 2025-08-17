@@ -1,0 +1,197 @@
+import { PipelineHistoryItem } from "../services/types/pipeline";
+import { RequestItem, RequestStats, Server } from "../services/types/request";
+
+export const mockServers: Server[] = [
+  { id: "srv-001", name: "Production Server 1", environment: "prod" },
+  { id: "srv-002", name: "Production Server 2", environment: "prod" },
+  { id: "srv-003", name: "Staging Server", environment: "staging" },
+  { id: "srv-004", name: "Development Server", environment: "dev" },
+  { id: "srv-005", name: "Test Server", environment: "test" },
+];
+
+export const mockPipelineHistory: PipelineHistoryItem[] = [
+  {
+    id: "hist-001",
+    executionId: "exec-001",
+    executionName: "Data Processing Pipeline",
+    startTime: "2024-08-15T10:00:00Z",
+    serverId: "srv-001",
+    serverName: "Production Server 1",
+    categoryId: "cat-001",
+    categoryName: "Data Processing",
+    status: "running",
+  },
+  {
+    id: "hist-002",
+    executionId: "exec-002",
+    executionName: "ML Training Pipeline",
+    startTime: "2024-08-15T09:30:00Z",
+    serverId: "srv-002",
+    serverName: "Production Server 2",
+    categoryId: "cat-002",
+    categoryName: "Machine Learning",
+    status: "queued",
+  },
+  {
+    id: "hist-003",
+    executionId: "exec-003",
+    executionName: "ETL Pipeline",
+    startTime: "2024-08-15T08:15:00Z",
+    serverId: "srv-003",
+    serverName: "Staging Server",
+    categoryId: "cat-003",
+    categoryName: "ETL",
+    status: "running",
+  },
+  {
+    id: "hist-004",
+    executionId: "exec-004",
+    executionName: "Batch Processing",
+    startTime: "2024-08-15T07:45:00Z",
+    serverId: "srv-001",
+    serverName: "Production Server 1",
+    categoryId: "cat-001",
+    categoryName: "Data Processing",
+    status: "queued",
+  },
+];
+
+export const mockRequestList: RequestItem[] = [
+  {
+    id: "req-001",
+    type: "permission",
+    status: "pending",
+    requesterId: "user-001",
+    requesterName: "Cheol-su Kim",
+    createdAt: "2024-08-17T09:00:00Z",
+    details: {
+      type: "permission",
+      roles: ["editor"],
+      includeOperator: true,
+      reason:
+        "I need editor and operator permissions for ML pipeline development and operation.",
+      startDate: "2024-08-20",
+      endDate: "2024-12-31",
+      targetServers: [
+        { id: "srv-001", name: "Production Server 1" },
+        { id: "srv-003", name: "Staging Server" },
+      ],
+    },
+    canApprove: true,
+  },
+  {
+    id: "req-002",
+    type: "pipeline",
+    status: "pending",
+    requesterId: "user-002",
+    requesterName: "Yeong-hui Park",
+    createdAt: "2024-08-17T08:30:00Z",
+    details: {
+      type: "pipeline",
+      action: "execute",
+      pipelineId: "pipe-001",
+      pipelineName: "Data Processing Pipeline",
+      serverId: "srv-001",
+      serverName: "Production Server 1",
+      description:
+        "Request to execute the pipeline for monthly data processing.",
+    },
+    canApprove: false,
+  },
+  {
+    id: "req-003",
+    type: "permission",
+    status: "approved",
+    requesterId: "user-003",
+    requesterName: "Min-su Lee",
+    createdAt: "2024-08-16T14:20:00Z",
+    updatedAt: "2024-08-16T15:00:00Z",
+    approverId: "admin-001",
+    approverName: "Administrator",
+    approverComment: "Approved for project progress.",
+    details: {
+      type: "permission",
+      roles: ["viewer"],
+      includeOperator: false,
+      reason: "Need viewer permission to monitor a new project.",
+      startDate: "2024-08-17",
+      endDate: "2024-11-30",
+      targetServers: [{ id: "srv-004", name: "Development Server" }],
+    },
+    canApprove: false,
+  },
+  {
+    id: "req-004",
+    type: "pipeline",
+    status: "rejected",
+    requesterId: "user-004",
+    requesterName: "Su-hyeon Jeong",
+    createdAt: "2024-08-16T11:15:00Z",
+    updatedAt: "2024-08-16T16:30:00Z",
+    approverId: "admin-002",
+    approverName: "System Administrator",
+    approverComment:
+      "Pipeline execution is not possible as the server is currently under maintenance.",
+    details: {
+      type: "pipeline",
+      action: "execute",
+      pipelineId: "pipe-002",
+      pipelineName: "ML Training Pipeline",
+      serverId: "srv-002",
+      serverName: "Production Server 2",
+      description: "Request to execute the pipeline for new model training.",
+    },
+    canApprove: false,
+  },
+  {
+    id: "req-005",
+    type: "permission",
+    status: "pending",
+    requesterId: "user-005",
+    requesterName: "Ji-eun Choi",
+    createdAt: "2024-08-17T10:45:00Z",
+    details: {
+      type: "permission",
+      roles: ["auditor"],
+      includeOperator: false,
+      reason: "Requesting auditor permissions for system audit.",
+      startDate: "2024-08-20",
+      endDate: "2024-09-30",
+      targetServers: mockServers,
+    },
+    canApprove: true,
+  },
+  {
+    id: "req-006",
+    type: "pipeline",
+    status: "pending",
+    requesterId: "user-001",
+    requesterName: "Cheol-su Kim",
+    createdAt: "2024-08-17T07:20:00Z",
+    details: {
+      type: "pipeline",
+      action: "stop",
+      pipelineId: "pipe-003",
+      pipelineName: "ETL Pipeline",
+      serverId: "srv-003",
+      serverName: "Staging Server",
+      executionId: "exec-003",
+      description: "Request to stop the pipeline due to performance issues.",
+    },
+    canApprove: true,
+  },
+];
+
+export const mockRequestStats: RequestStats = {
+  total: mockRequestList.length,
+  pending: mockRequestList.filter((req) => req.status === "pending").length,
+  approved: mockRequestList.filter((req) => req.status === "approved").length,
+  rejected: mockRequestList.filter((req) => req.status === "rejected").length,
+  pipelineRequests: mockRequestList.filter((req) => req.type === "pipeline")
+    .length,
+  permissionRequests: mockRequestList.filter((req) => req.type === "permission")
+    .length,
+  awaitingMyApproval: mockRequestList.filter(
+    (req) => req.canApprove && req.status === "pending"
+  ).length,
+};

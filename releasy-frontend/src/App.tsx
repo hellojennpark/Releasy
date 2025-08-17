@@ -5,6 +5,7 @@ import HistoryPage from "./components/history/HistoryPage";
 import "./styles/global.css";
 
 import { useLocation } from "react-router-dom";
+import RequestsPage from "./components/requests/RequestsPage";
 
 const AppContent = () => {
   const location = useLocation();
@@ -28,6 +29,7 @@ const AppContent = () => {
       <Routes>
         <Route path="/" element={<DashboardPage />} />
         <Route path="/history" element={<HistoryPage />} />
+        <Route path="/requests" element={<RequestsPage />} />
       </Routes>
     </AppLayout>
   );

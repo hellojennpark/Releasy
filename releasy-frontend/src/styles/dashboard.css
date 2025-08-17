@@ -1,8 +1,4 @@
 :root {
-  --primary-color: var(--accent-primary);
-  --success-color: var(--accent-success);
-  --warning-color: var(--accent-warning);
-  --error-color: var(--accent-error);
   --info-color: #8B5CF6;
   --orange-color: #F97316;
 
