@@ -6,6 +6,7 @@ import {
   PermissionRequest,
 } from "../../services/types/request";
 import dayjs from "dayjs";
+import { IconComponent } from "./IconComponent";
 
 interface RequestItemProps {
   request: RequestItem;
@@ -58,7 +59,10 @@ const RequestItemComponent: React.FC<RequestItemProps> = ({
       <div className="request-details">
         <div className="detail-row">
           <span className="detail-label">Action:</span>
-          <span className={`status-badge status-${details.action}`}>
+          <span
+            className={`status-badge status-${details.action} include-icon`}
+          >
+            <IconComponent action={details.action} size={16} />
             {details.action}
           </span>
         </div>
@@ -92,7 +96,10 @@ const RequestItemComponent: React.FC<RequestItemProps> = ({
       <div className="request-details">
         <div className="detail-row">
           <span className="detail-label">Permission:</span>
-          <span className="type-badge">{roleText.toUpperCase()}</span>
+          <span className="type-badge include-icon">
+            <IconComponent role={details.roles[0]} size={16} />
+            {roleText.toUpperCase()}
+          </span>
         </div>
         <div className="detail-row">
           <span className="detail-label">Period:</span>

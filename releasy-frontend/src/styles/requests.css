@@ -29,7 +29,7 @@
 
 .toggle-button {
   padding: 8px 16px;
-  border: none;
+  border: var(--text-secondary) 1px solid;
   background: transparent;
   border-radius: 6px;
   cursor: pointer;
@@ -40,12 +40,14 @@
 
 .toggle-button.active {
   background: var(--primary-color);
+  border: var(--primary-color) 1px solid;
   color: white;
 }
 
 .toggle-button:hover:not(.active) {
   background: var(--background-hover);
   color: var(--text-primary);
+  border: var(--text-primary) 1px solid;
 }
 
 /* Request Form Styles */
@@ -669,4 +671,10 @@
   text-align: center;
   padding: 32px;
   color: var(--text-secondary);
+}
+
+.include-icon {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
