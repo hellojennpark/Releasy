@@ -58,7 +58,9 @@ const RequestItemComponent: React.FC<RequestItemProps> = ({
       <div className="request-details">
         <div className="detail-row">
           <span className="detail-label">Action:</span>
-          <span className="detail-value">{details.action}</span>
+          <span className={`status-badge status-${details.action}`}>
+            {details.action}
+          </span>
         </div>
         {details.pipelineName && (
           <div className="detail-row">
@@ -90,7 +92,7 @@ const RequestItemComponent: React.FC<RequestItemProps> = ({
       <div className="request-details">
         <div className="detail-row">
           <span className="detail-label">Permission:</span>
-          <span className="detail-value">{roleText}</span>
+          <span className="type-badge">{roleText.toUpperCase()}</span>
         </div>
         <div className="detail-row">
           <span className="detail-label">Period:</span>
@@ -149,7 +151,7 @@ const RequestItemComponent: React.FC<RequestItemProps> = ({
           <span className={`status-badge status-${request.status}`}>
             {request.status}
           </span>
-          <span className="type-badge">{request.type}</span>
+          <span className="type-badge">{request.type.toUpperCase()}</span>
         </div>
       </div>
 

@@ -436,6 +436,26 @@
   color: var(--error-color);
 }
 
+.status-create {
+  background: var(--primary-light);
+  color: var(--primary-color);
+}
+
+.status-modify {
+  background: var(--warning-light);
+  color: var(--warning-color);
+}
+
+.status-execute {
+  background: var(--success-light);
+  color: var(--success-color);
+}
+
+.status-stop {
+  background: var(--error-light);
+  color: var(--error-color);
+}
+
 .type-badge {
   padding: 4px 8px;
   border-radius: 4px;
@@ -470,6 +490,12 @@
 
 .detail-value {
   color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+.date-diff {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
 }
 
 .server-list {
@@ -481,9 +507,10 @@
 .server-tag {
   background: var(--primary-light);
   color: var(--primary-color);
+  border: 1px solid var(--primary-color);
   padding: 2px 8px;
-  border-radius: 12px;
-  font-size: 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
 }
 
 .approval-section {

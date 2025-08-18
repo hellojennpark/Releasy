@@ -287,7 +287,7 @@ const RequestsPage: React.FC = () => {
                     </div>
                     <div className="detail-row">
                       <span className="detail-label">Server:</span>
-                      <span className="detail-value">
+                      <span className="server-tag">
                         {selectedPipeline.serverName}
                       </span>
                     </div>
