@@ -182,7 +182,7 @@
 }
 
 /* Desktop styles */
-@media (min-width: 769px) {
+@media (min-width: 1000px) {
   .sidebar {
     position: relative;
     top: 0;
