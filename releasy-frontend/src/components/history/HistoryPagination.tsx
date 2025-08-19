@@ -41,7 +41,6 @@ const HistoryPagination: React.FC<HistoryPaginationProps> = ({
       pageNumbers.push(i);
     }
 
-    // "..."와 마지막 페이지
     if (endPage < totalPages) {
       if (endPage < totalPages - 1) {
         pageNumbers.push("...");

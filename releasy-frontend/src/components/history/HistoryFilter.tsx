@@ -198,7 +198,6 @@ const HistoryFilter: React.FC<HistoryFilterProps> = ({
           </div>
         </div>
 
-        {/* 카테고리 */}
         <div className="filter-group">
           <label className="filter-label">
             Categories (

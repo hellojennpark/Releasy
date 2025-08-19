@@ -22,6 +22,7 @@
 }
 
 .history-filters {
+  overflow-x: auto;
   background: var(--bg-secondary);
   border-radius: 12px;
   padding: 20px;
@@ -281,7 +282,6 @@
   margin: 0;
 }
 
-/* 체크박스 리스트 */
 .checkbox-list {
   border: 1px solid var(--border-color);
   border-radius: 6px;

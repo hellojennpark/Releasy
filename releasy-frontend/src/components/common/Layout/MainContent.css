@@ -24,6 +24,6 @@
 
 @media (max-width: 480px) {
   .main-content {
-    padding: var(--spacing-sm);
+    padding: var(--spacing-lg);
   }
 }
