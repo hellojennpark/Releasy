@@ -373,6 +373,7 @@
 
 /* Request Item Styles */
 .request-item {
+  overflow: auto;
   background: var(--background-card);
   border: 1px solid var(--border-color);
   border-radius: 8px;
