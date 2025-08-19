@@ -7,7 +7,7 @@ export interface PageInfo {
 
 export const PAGE_CONFIG: Record<string, PageInfo> = {
   dashboard: {
-    title: "Overview",
+    title: "Dashboard",
     description:
       "Integrated dashboard for overview of entire deployment environment status.",
     path: "/",
