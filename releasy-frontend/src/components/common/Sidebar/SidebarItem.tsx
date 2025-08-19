@@ -17,13 +17,12 @@ export const SidebarItem: React.FC<SidebarItemProps> = ({
   label,
   isActive = false,
   isCollapsed = false,
-  isActivate = true, // 기본값을 true로 설정
+  isActivate = true,
   onClick,
   href,
   badge,
 }) => {
   const handleClick = (e: React.MouseEvent) => {
-    // isActivate가 false면 클릭 이벤트 차단
     if (!isActivate) {
       e.preventDefault();
       return;
@@ -48,7 +47,6 @@ export const SidebarItem: React.FC<SidebarItemProps> = ({
         title={isCollapsed ? label : undefined}
         style={{
           pointerEvents: !isActivate ? "none" : "auto",
-          color: !isActivate ? "#999" : "inherit",
           opacity: !isActivate ? 0.6 : 1,
           cursor: !isActivate ? "not-allowed" : "pointer",
         }}
@@ -68,13 +66,12 @@ export const SidebarItem: React.FC<SidebarItemProps> = ({
   return (
     <button
       onClick={handleClick}
-      disabled={!isActivate} // button의 경우 disabled 속성 사용
+      disabled={!isActivate}
       className={`sidebar-item ${isActive ? "active" : ""} ${
         isCollapsed ? "collapsed" : ""
       } ${!isActivate ? "disabled" : ""}`}
       title={isCollapsed ? label : undefined}
       style={{
-        color: !isActivate ? "#999" : "inherit",
         opacity: !isActivate ? 0.6 : 1,
         cursor: !isActivate ? "not-allowed" : "pointer",
       }}
