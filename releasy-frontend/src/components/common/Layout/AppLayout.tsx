@@ -4,20 +4,25 @@ import { Sidebar } from "../Sidebar/Sidebar";
 import { MainContent } from "./MainContent";
 import { useTheme } from "../../../hooks/useTheme";
 import "./AppLayout.css";
+import { getPageInfo } from "../../../utils/pageConfig";
 
 interface AppLayoutProps {
   children: React.ReactNode;
   activeMenuItem?: string;
+  showPageHeader?: boolean;
 }
 
 export const AppLayout: React.FC<AppLayoutProps> = ({
   children,
   activeMenuItem = "dashboard",
+  showPageHeader = true,
 }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const { theme } = useTheme();
+
+  const pageInfo = getPageInfo(activeMenuItem);
 
   // Check if mobile screen
   useEffect(() => {
@@ -75,6 +80,9 @@ export const AppLayout: React.FC<AppLayoutProps> = ({
         <MainContent
           isSidebarOpen={!isMobile && isSidebarOpen}
           isSidebarCollapsed={!isMobile && isSidebarCollapsed}
+          pageTitle={pageInfo.title}
+          pageDescription={pageInfo.description}
+          showPageHeader={showPageHeader}
         >
           {children}
         </MainContent>

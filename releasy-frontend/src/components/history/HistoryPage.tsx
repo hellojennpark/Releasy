@@ -70,13 +70,6 @@ const HistoryPage: React.FC = () => {
 
   return (
     <div className="history-page">
-      <div className="history-header">
-        <h1 className="history-title">Pipeline History</h1>
-        <p className="history-subtitle">
-          Track and monitor pipeline execution history
-        </p>
-      </div>
-
       <HistoryFilter
         filters={filters}
         onFiltersChange={updateFilters}

@@ -5,6 +5,7 @@ interface MenuItem {
   id: string;
   icon: React.ReactNode;
   label: string;
+  activate: boolean;
   href?: string;
   badge?: number | string;
 }
@@ -31,6 +32,7 @@ export const SidebarMenu: React.FC<SidebarMenuProps> = ({
           label={item.label}
           isActive={activeItemId === item.id}
           isCollapsed={isCollapsed}
+          isActivate={item.activate}
           href={item.href}
           badge={item.badge}
           onClick={() => onItemClick?.(item.id)}
@@ -45,6 +47,7 @@ export const defaultMenuItems: MenuItem[] = [
     id: "dashboard",
     label: "Dashboard",
     href: "/",
+    activate: true,
     icon: (
       <svg
         width="20"
@@ -65,6 +68,7 @@ export const defaultMenuItems: MenuItem[] = [
     id: "requests",
     label: "Requests",
     href: "/requests",
+    activate: true,
     badge: 3,
     icon: (
       <svg
@@ -84,6 +88,7 @@ export const defaultMenuItems: MenuItem[] = [
     id: "pipelines",
     label: "Pipelines",
     href: "/pipelines",
+    activate: false,
     icon: (
       <svg
         width="20"
@@ -103,6 +108,7 @@ export const defaultMenuItems: MenuItem[] = [
     id: "history",
     label: "History",
     href: "/history",
+    activate: true,
     icon: (
       <svg
         width="20"
@@ -124,6 +130,7 @@ export const defaultMenuItems: MenuItem[] = [
     id: "settings",
     label: "Settings",
     href: "/settings",
+    activate: false,
     icon: (
       <svg
         width="20"
@@ -142,6 +149,7 @@ export const defaultMenuItems: MenuItem[] = [
     id: "admin",
     label: "Admin",
     href: "/admin",
+    activate: false,
     icon: (
       <svg
         width="20"

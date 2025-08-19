@@ -443,7 +443,6 @@ const RequestsPage: React.FC = () => {
   return (
     <div className="requests-page">
       <div className="requests-header">
-        <h1 className="requests-title">Request Management</h1>
         <div className="page-toggle">
           <button
             className={`toggle-button ${pageMode === "create" ? "active" : ""}`}

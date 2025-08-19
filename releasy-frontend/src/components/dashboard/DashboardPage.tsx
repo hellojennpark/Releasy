@@ -157,8 +157,6 @@ const DashboardPage: React.FC = () => {
       <div className="dashboard-content">
         {/* Header */}
         <div className="dashboard-header">
-          <h1 className="dashboard-title">Overview</h1>
-
           {/* Filters */}
           <div className="dashboard-filters">
             <CategoryFilter
